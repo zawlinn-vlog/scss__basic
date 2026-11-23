@@ -1,0 +1,31 @@
+//
+
+@use "../abstract/variables" as var;
+@use "../abstract/function" as fn;
+
+:root {
+  @each $name, $color in var.$colors {
+    --#{$name}-color: #{$color};
+  }
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px / 16px = 0.625 x 100 = 62.5%
+}
+
+body {
+  color: fn.getColor(grey-dark-2);
+  font-weight: 300;
+  line-height: 1.6;
+  font-size: 1.6rem;
+  font-family: var.$font-primary;
+}

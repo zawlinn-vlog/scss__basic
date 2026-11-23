@@ -1,0 +1,32 @@
+//
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+$primary: #c69963;
+$primary-dark: #b28451;
+
+$secondary: #101d2c;
+
+$grey-light-1: #f9f7f6;
+$grey-light-2: #aaa;
+
+$grey-dark-1: #54483a;
+$grey-dark-2: #6d5d48;
+
+$colors: (
+  primary: $primary,
+  primary-dark: $primary-dark,
+  secondary: $secondary,
+  grey-light-1: $grey-light-1,
+  grey-light-2: $grey-light-2,
+  grey-dark-1: $grey-dark-1,
+  grey-dark-2: $grey-dark-2,
+);
+
+//
+
+$font-primary: "Nunito", sans-serif;
+$font-display: "Josefin Sans", sans-serif;
+
+@each $name, $color in $colors {
+}

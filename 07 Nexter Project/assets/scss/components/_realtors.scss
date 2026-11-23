@@ -1,0 +1,9 @@
+//
+@use "../abstract/variables" as var;
+@use "../abstract/function" as fn;
+
+.realtors {
+  background-color: fn.getColor(secondary);
+
+  grid-column: col-start 7 / full-end;
+}

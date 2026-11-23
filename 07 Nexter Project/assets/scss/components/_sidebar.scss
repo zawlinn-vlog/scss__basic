@@ -1,0 +1,11 @@
+//
+
+@use "../abstract/variables" as var;
+@use "../abstract/function" as fn;
+
+.sidebar {
+  background-color: fn.getColor(primary);
+
+  grid-column: sidebar-start/ sidebar-end;
+  grid-row: 1 / -1;
+}

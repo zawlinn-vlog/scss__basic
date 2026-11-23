@@ -1,0 +1,67 @@
+//
+
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mx;
+
+.row {
+  max-width: var.$grid-width;
+  //   margin-inline: auto;
+  margin: 0 auto;
+
+  &:not(:last-child) {
+    margin-bottom: var.$gutter-vertical;
+
+    @include mx.respond(tab-port) {
+      margin-bottom: var.$gutter-vertical-sm;
+    }
+  }
+
+  @include mx.respond(tab-port) {
+    max-width: 51rem;
+    padding: 0 3rem;
+  }
+
+  @include mx.clearFix;
+
+  [class^="col-"] {
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: var.$gutter-horizontal;
+      @include mx.respond(tab-port) {
+        margin-right: 0 !important;
+        margin-bottom: var.$gutter-vertical-sm;
+      }
+    }
+
+    @include mx.respond(tab-port) {
+      width: 100% !important;
+    }
+  }
+
+  //  FLOAT LAYOUT SYSTEM
+
+  @for $i from 2 through 4 {
+    //
+
+    .col-1-of-#{$i} {
+      width: calc((100% - #{var.$gutter-horizontal * ($i - 1)}) / $i);
+    }
+
+    //
+
+    @if ($i >= 3) {
+      @for $j from 2 through 4 {
+        @if ($i - 1 >= $j) {
+          .col-#{$j}-of-#{$i} {
+            width: calc(
+              ($j * ((100% - var.$gutter-horizontal * ($i - 1)) / $i)) +
+                var.$gutter-horizontal *
+                ($j - 1)
+            );
+          }
+        }
+      }
+    }
+  }
+}

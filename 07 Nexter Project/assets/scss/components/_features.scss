@@ -1,0 +1,38 @@
+//
+
+@use "../abstract/variables" as var;
+@use "../abstract/function" as fn;
+
+.features {
+  // background-color: fn.getColor(grey-light-2);
+
+  grid-column: center-start / center-end;
+
+  display: grid;
+  // grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 6rem;
+  align-items: start;
+
+  margin: 15rem 0;
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  column-gap: 2.5rem;
+  row-gap: 1.5rem;
+
+  &__icon {
+    fill: fn.getColor(primary);
+    width: 4.5rem;
+    height: 4.5rem;
+
+    transform: translateY(-1rem);
+
+    grid-row: 1 / span 2;
+  }
+
+  &__text {
+  }
+}

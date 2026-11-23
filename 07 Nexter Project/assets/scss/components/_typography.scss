@@ -1,0 +1,76 @@
+//
+
+@use "../abstract/variables" as var;
+@use "../abstract/function" as fn;
+
+%heading {
+  font-family: var.$font-display;
+  font-weight: 400;
+}
+
+.heading-1 {
+  @extend %heading;
+}
+
+.heading-2 {
+  @extend %heading;
+  font-size: 4rem;
+  font-style: italic;
+  line-height: 1.1;
+
+  &--light {
+    color: fn.getColor(grey-light-1);
+  }
+  &--dark {
+    color: fn.getColor(grey-dark-1);
+  }
+}
+
+.heading-3 {
+  @extend %heading;
+  font-size: 1.6rem;
+  color: fn.getColor(primary);
+  text-transform: uppercase;
+}
+
+.heading-4 {
+  @extend %heading;
+  font-size: 1.9rem;
+
+  &--light {
+    color: fn.getColor(grey-light-1);
+  }
+  &--dark {
+    color: fn.getColor(grey-dark-1);
+  }
+}
+
+.btn {
+  background-color: fn.getColor(primary);
+  color: fn.getColor(grey-light-1);
+  border: none;
+  border-radius: 0;
+  font-family: var.$font-display;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 1.8rem 3rem;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: fn.getColor(primary-dark);
+  }
+}
+
+.mb-sm {
+  margin-bottom: 2rem;
+}
+.mb-md {
+  margin-bottom: 3rem;
+}
+.mb-lg {
+  margin-bottom: 4rem;
+}
+.mb-hg {
+  margin-bottom: 8rem;
+}

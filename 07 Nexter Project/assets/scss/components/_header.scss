@@ -1,0 +1,10 @@
+//
+
+@use "../abstract/variables" as var;
+@use "../abstract/function" as fn;
+
+.header {
+  background-color: fn.getColor(grey-dark-1);
+
+  grid-column: full-start / col-end 6;
+}

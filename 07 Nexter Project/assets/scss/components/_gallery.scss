@@ -1,0 +1,10 @@
+//
+
+@use "../abstract/variables" as var;
+@use "../abstract/function" as fn;
+
+.gallery {
+  background-color: fn.getColor(grey-dark-1);
+
+  grid-column: full-start / full-end;
+}

@@ -1,0 +1,42 @@
+//
+
+@use "../abstract/variables" as var;
+@use "../abstract/function" as fn;
+
+.homes {
+  // background-color: fn.getColor(secondary);
+  margin: 15rem 0;
+
+  grid-column: center-start / center-end;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 7rem;
+}
+
+.home {
+  background-color: fn.getColor(grey-light-1);
+
+  &__img {
+    width: 100%;
+  }
+
+  &__like {
+  }
+
+  &__name {
+  }
+
+  &__location,
+  &__rooms,
+  &__area,
+  &__price {
+    svg {
+      fill: fn.getColor(primary);
+      height: 2rem;
+      width: 2rem;
+    }
+    p {
+    }
+  }
+}

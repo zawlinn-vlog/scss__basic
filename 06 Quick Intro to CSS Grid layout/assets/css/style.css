@@ -1,0 +1,201 @@
+:root {
+  --color-1: green;
+  --color-2: yellow;
+  --color-3: purple;
+  --color-4: gold;
+  --color-5: brown;
+  --color-6: tomato;
+  --color-7: orangered;
+  --color-8: navy;
+  --color-9: skyblue;
+  --color-10: burlywood;
+  --color-11: black;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.box-1 {
+  font-size: 3rem;
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-2 {
+  font-size: 3rem;
+  background-color: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-3 {
+  font-size: 3rem;
+  background-color: purple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-4 {
+  font-size: 3rem;
+  background-color: gold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-5 {
+  font-size: 3rem;
+  background-color: brown;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-6 {
+  font-size: 3rem;
+  background-color: tomato;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-7 {
+  font-size: 3rem;
+  background-color: orangered;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-8 {
+  font-size: 3rem;
+  background-color: navy;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-9 {
+  font-size: 3rem;
+  background-color: skyblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-10 {
+  font-size: 3rem;
+  background-color: burlywood;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-11 {
+  font-size: 3rem;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 100rem;
+  margin: 5rem auto;
+  background-color: #ddd;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(5rem, auto);
+  gap: 1rem;
+}
+
+.box-1,
+.box-3,
+.box-5,
+.box-6,
+.box-7,
+.box-8,
+.box-11 {
+  color: #fff;
+}
+
+.box-1 {
+  grid-area: 1/1/2/-1;
+}
+
+.box-2 {
+  grid-area: 2/1/3/4;
+  height: 30rem;
+}
+
+.box-5 {
+  grid-area: 3/1/4/-1;
+  height: 30rem;
+}
+
+.box-9 {
+  grid-area: 5/1/6/3;
+}
+
+.box-10 {
+  grid-area: 5/3/6/-1;
+}
+
+.box-11 {
+  grid-area: 6/1/7/-1;
+}
+
+.main {
+  max-width: 100rem;
+  margin: 4rem auto;
+  display: grid;
+  grid-template-columns: repeat(3, [content-start] 1fr [content-end]) 20rem [grid-end];
+  grid-template-rows: [header-start] 10rem [header-end box-start] 20rem [box-end main-start] 40rem [main-end footer-start] 10rem [footer-end];
+  grid-template-areas: "head head head head" "box-1 box-2 box-3 side" "main main main side" "foot foot foot foot";
+  gap: 1.6rem;
+}
+
+.box {
+  background-color: crimson;
+  color: #fff;
+  font-size: 1.6rem;
+  padding: 2rem;
+}
+.box--1 {
+  grid-area: head;
+}
+.box--2 {
+  grid-area: box-1;
+}
+.box--3 {
+  grid-area: box-2;
+}
+.box--4 {
+  grid-area: box-3;
+}
+.box--5 {
+  grid-area: side;
+}
+.box--6 {
+  grid-area: main;
+}
+.box--7 {
+  grid-area: foot;
+}
